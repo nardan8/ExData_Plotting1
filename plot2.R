@@ -16,7 +16,7 @@ if (!file.exists("household_power_consumption.txt")) {
 df <- read.table("household_power_consumption.txt", header = TRUE, sep = ";")[66637:69516,]
 
 # convert values
-df <- df %>% mutate(Date = as.Date(Date, "%d/%m/%y"),
+df <- df %>% mutate(Date = as.Date(Date, "%d/%m/%Y"),
                     Time = format(strptime(Time, "%H:%M:%S"),"%H:%M:%S"),
                     Global_active_power = as.numeric(Global_active_power),
                     DayWithTime = as.POSIXct(paste(Date, Time), "%d-%m-%d %H:%M"))
