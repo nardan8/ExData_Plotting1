@@ -29,7 +29,7 @@ df <- df %>% mutate(Date = as.Date(Date, "%d/%m/%y"),
 png("plot4.png")
 
 # columnwise positioning [2, 2] multiple plots
-par(mfrow = c(2, 2))
+par(mfcol = c(2, 2))
 
 # construct 1st graph
 plot(Global_active_power~DayWithTime, 
